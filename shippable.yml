@@ -7,6 +7,10 @@ env:
   - NODE_VERSION=9.5.0
   - NODE_VERSION=9.4.0
 
+matrix:
+  allow_failures:
+    - env: NODE_VERSION=9.4.0
+
 build:
   pre_ci_boot:
     image_name: "drydock/u14nodall"
