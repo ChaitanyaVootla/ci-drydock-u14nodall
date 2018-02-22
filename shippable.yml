@@ -14,5 +14,7 @@ build:
     pull: true
   ci:
     - echo "nodejs version is $NODE_VERSION"
+    - nvm use $NODE_VERSION
+    - test "$(node --version)" == "v$NODE_VERSION"
     
   
